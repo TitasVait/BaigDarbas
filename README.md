@@ -3,7 +3,7 @@
 
 Testuojamas puslapis: https://www.tiketa.lt/
 
-5 testai yra:
+5 tests:
 1. testCaptionFieldWithAValidInput
    1. Caption input
    2. Click on Search
