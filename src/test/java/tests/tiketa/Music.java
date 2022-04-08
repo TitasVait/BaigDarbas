@@ -12,7 +12,7 @@ public class Music extends BaseTest {
         pages.Common.acceptAllCookies();
     }
     @Test
-    public void testCityFieldFunctionality() {
+    public void testFilterFunctionality() {
         String expectedOutput = "VILNIUS\nALYTUS";
         String actualOutput;
 
