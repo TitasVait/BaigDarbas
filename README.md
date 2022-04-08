@@ -24,7 +24,7 @@ Testuojamas puslapis: https://www.tiketa.lt/
    3. Input password
    4. Click on "Login" button
    5. Check if you're logged in
-5. testCityFieldFunctionality
+5. testFilterFunctionality
    1. Click on City field and select Vilnius
    2. Click on City field and select Alytus
    3. Confirm that there are both cities in filters
