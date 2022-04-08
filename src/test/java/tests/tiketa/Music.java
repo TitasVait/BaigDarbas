@@ -7,9 +7,9 @@ import tests.BaseTest;
 
 public class Music extends BaseTest {
     @BeforeClass
-    public void openLink() {
+    public void openLinkAndAcceptCookies() {
         pages.Common.openLink("https://www.tiketa.lt/EN/koncertai");
-        pages.tiketa.Login.acceptAll();
+        pages.Common.acceptAllCookies();
     }
     @Test
     public void testCityFieldFunctionality() {

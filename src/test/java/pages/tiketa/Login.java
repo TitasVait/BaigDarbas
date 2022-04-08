@@ -10,23 +10,12 @@ import utils.Driver;
 import java.time.Duration;
 
 public class Login {
-    public static void waitForAdPopupToBeVisible() {
-        WebElement popup = Common.getElement(By.xpath("//*[@class='main-bg']"));
-
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.visibilityOf(popup));
-    }
-
-
-    public static void acceptAll() {
-        By locator = By.xpath("//*[@id='cookiescript_accept']");
-        Common.clickElement(locator);
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
+//    public static void waitForAdPopupToBeVisible() {
+//        WebElement popup = Common.getElement(By.xpath("//*[@class='main-bg']"));
+//
+//        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
+//        wait.until(ExpectedConditions.visibilityOf(popup));
+//    }
 
     public static void clickOnLoginTab() {
         By locator = By.xpath("//*[@id='OnlyLogin']");

@@ -21,7 +21,7 @@ public class Music {
     public static void waitForRefresh() {
         WebElement filter = Common.getElement(By.xpath("//*[@class='stack-elem text-uppercase']"));
 
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.stalenessOf(filter));
     }
     public static void clickOnAlytus() {

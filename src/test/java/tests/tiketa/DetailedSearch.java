@@ -7,9 +7,9 @@ import tests.BaseTest;
 
 public class DetailedSearch extends BaseTest {
     @BeforeClass
-    public void openLink() {
+    public void openLinkAndAcceptCookies() {
         pages.Common.openLink("https://www.tiketa.lt/EN/search");
-        pages.Common.cookiesAndReload();
+        pages.Common.acceptAllCookies();
     }
     @Test
     public void testCaptionFieldWithAValidInput() {
@@ -21,7 +21,7 @@ public class DetailedSearch extends BaseTest {
         pages.tiketa.DetailedSearch.clickOnSearchButton();
         output = pages.tiketa.DetailedSearch.getResultText();
 
-        //Palyginimass
+        //Palyginimas
         Assert.assertTrue(output.contains(actualInput));
     }
 

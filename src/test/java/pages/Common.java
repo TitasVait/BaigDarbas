@@ -2,13 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.Driver;
-
-import java.time.Duration;
-import java.util.List;
 
 public class Common {
 
@@ -18,10 +12,6 @@ public class Common {
 
     public static WebElement getElement(By locator) {
         return Driver.driver.findElement(locator);
-    }
-
-    public static List<WebElement> getElements(By locator) {
-        return Driver.driver.findElements(locator);
     }
 
     public static void clickElement(By locator) {
@@ -36,15 +26,11 @@ public class Common {
         return getElement(locator).getText();
     }
 
-    public static void cookiesAndReload(){
-        //Cookies
-        WebElement popup = Common.getElement(By.xpath("//*[@id='cookiescript_accept']"));
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
+    public static void acceptAllCookies() {
         By locator = By.xpath("//*[@id='cookiescript_accept']");
         Common.clickElement(locator);
-        //Brief reload
         try {
-            Thread.sleep(3000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
