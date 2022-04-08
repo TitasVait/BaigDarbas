@@ -36,12 +36,6 @@ public class Common {
         return getElement(locator).getText();
     }
 
-    public static void selectOptionByValue(By locator, String value) {
-        WebElement element = getElement(locator);
-        Select selectElement = new Select(element);
-        selectElement.selectByValue(value);
-    }
-
     public static void cookiesAndReload(){
         //Cookies
         WebElement popup = Common.getElement(By.xpath("//*[@id='cookiescript_accept']"));

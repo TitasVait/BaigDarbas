@@ -40,14 +40,15 @@ public class Login {
         By locator = By.xpath("//*[@id='txtLoginPsw']");
         Common.sendKeys(locator, message);
     }
-    public static void clickOnLoginButtonAndSleepFor1Sec() {
+    public static void clickOnLoginButton() {
         By locator = By.xpath("//*[@id='btnLogin']");
         Common.clickElement(locator);
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    }
+    public static void waitForRefresh() {
+        WebElement login = Common.getElement(By.xpath("//*[@id='OnlyLogin']"));
+
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.stalenessOf(login));
     }
     public static String loginInfo() {
         By locator = By.xpath("//*[@class='mano-tiketa text-uppercase']");

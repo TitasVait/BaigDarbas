@@ -13,9 +13,6 @@ public class DetailedSearch extends BaseTest {
     }
     @Test
     public void testCaptionFieldWithAValidInput() {
-        //1. Caption input
-        //2. Click on Search
-        //3. Find from results containing actualInput
         String actualInput = "EMIGRANTAI";
         String output;
 
@@ -30,10 +27,6 @@ public class DetailedSearch extends BaseTest {
 
     @Test
     public void confirmXButtonFunctionalityOnCityField(){
-        //1. Click on city field's span
-        //2. Click on Vilnius
-        //3. Click X
-        //4. Confirm if Dropdown option displays "All cities"
         String expectedOutput = "All cities";
         String actualoutput;
 
@@ -49,10 +42,6 @@ public class DetailedSearch extends BaseTest {
 
     @Test
     public void testDateFunctionalityWithInvalidInputs() {
-        //1. Set date from 2024-01-01
-        //2. to 2024-02-01
-        //3. Click Search
-        //4. No events have been found should be displayed //*[@id="eventsContainter"]/div[3]/h4[1]/center[1]
         String expectedOutput = "No events have been found";
         String actualOutput;
         String dateFrom = "2024-01-01";
